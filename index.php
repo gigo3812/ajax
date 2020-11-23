@@ -1,12 +1,12 @@
 <?php
 include_once("header.php");
-require("function2.php");
+require("session.php");
 
 session_start();
 
 ?>
 <header class="py-5 position-absolute " style="left: 0%;">
-    <form action="function2.php" method="POST">
+    <form action="session.php" method="POST">
         <input type="hidden" name="name" value="gigo">
         <button class="<?php if ($_SESSION["name"] == "gigo") : ?> btn btn-sm btn-success <?php else : ?>  btn btn-sm btn-danger <?php endif; ?>"><?php if (!empty($_SESSION["name"])) echo ("Log Out");
                                                                                                                                                     else echo ("Login"); ?></button>
